@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔐 Tapasya's Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --gold: #D4A017;
+      --gold-light: #F0C040;
+      --pink: #F0A0BE;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a0a00 0%, #2d1500 40%, #1a0800 70%, #0d0500 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
+    }
+
+    .card {
+      position: relative;
+      z-index: 10;
+      background: rgba(255,253,244,0.06);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(212,160,23,0.3);
+      border-radius: 28px;
+      padding: clamp(2rem, 6vw, 3.5rem) clamp(1.5rem, 6vw, 3rem);
+      max-width: 480px;
+      width: 90vw;
+      text-align: center;
+      box-shadow: 0 0 0 1px rgba(212,160,23,0.1), 0 30px 80px rgba(0,0,0,0.5);
+      animation: cardIn 0.8s ease both;
+    }
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(30px) scale(0.96); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .question-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 6vw, 2.4rem);
+      color: #FFF8E8;
+      margin-bottom: 2.5rem;
+      line-height: 1.3;
+    }
+
+    .options-row {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      min-height: 70px;
+    }
+
+    .option-btn {
+      padding: 0.9rem 2rem;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid rgba(212,160,23,0.4);
+      transition: transform 0.08s ease;
+    }
+
+    #yesBtn {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #2C1F0A;
+    }
+    #yesBtn:hover { transform: translateY(-2px) scale(1.04); }
+
+    #noBtn {
+      background: rgba(212,160,23,0.08);
+      color: rgba(255,248,220,0.85);
+      position: relative;
+    }
+
+    .fade-exit { animation: fadeOut 0.7s ease forwards; }
+    @keyframes fadeOut { to { opacity: 0; transform: scale(0.95); } }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="mainCard">
+    <p class="question-text">do you love me? 🤨</p>
+    <div class="options-row" id="optionsRow">
+      <button class="option-btn" id="yesBtn" onclick="enterSite()">Yes</button>
+      <button class="option-btn" id="noBtn">No</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const optionsRow = document.getElementById('optionsRow');
+
+    function dodge(clientX, clientY) {
+      const rect = noBtn.getBoundingClientRect();
+      const btnCenterX = rect.left + rect.width / 2;
+      const btnCenterY = rect.top + rect.height / 2;
+      const dist = Math.hypot(clientX - btnCenterX, clientY - btnCenterY);
+
+      if (dist < 110) {
+        const margin = 20;
+        const maxX = window.innerWidth - rect.width - margin;
+        const maxY = window.innerHeight - rect.height - margin;
+        const newX = Math.random() * Math.max(maxX, margin);
+        const newY = Math.random() * Math.max(maxY, margin);
+
+        noBtn.style.position = 'fixed';
+        noBtn.style.left = newX + 'px';
+        noBtn.style.top = newY + 'px';
+        noBtn.style.margin = '0';
+      }
+    }
+
+    document.addEventListener('mousemove', (e) => dodge(e.clientX, e.clientY));
+    document.addEventListener('touchstart', (e) => {
+      const t = e.touches[0];
+      dodge(t.clientX, t.clientY);
+    }, { passive: true });
+
+    // Prevent the No button from ever registering a real click
+    noBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      dodge(e.clientX, e.clientY);
+    });
+
+    function enterSite() {
+      document.getElementById('mainCard').classList.add('fade-exit');
+      sessionStorage.setItem('enteredViaEntry', 'true');
+      setTimeout(() => { window.location.href = 'try.html'; }, 700);
+    }
+  </script>
+</body>
+</html>

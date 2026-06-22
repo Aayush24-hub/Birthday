@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Tapasya! 🌻🦋 Tapsu Baby's Special Day</title>
+  <meta name="description" content="A special birthday celebration page for Tapasya — Tapsu Baby — filled with love, memories, and warm wishes."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <!-- NOTE: Using Great Vibes for the big name to fix the y/v rendering issue in Playfair Display at large sizes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Dancing+Script:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Require visitors to pass through entry.html first -->
+  <script>
+    if (sessionStorage.getItem('enteredViaEntry') !== 'true') {
+      window.location.replace('entry.html');
+    }
+  </script>
+  <!-- Auto-play music (trimmed from 1:29 by ffmpeg) -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg"/>
+    <source src="music.webm" type="audio/webm"/>
+  </audio>
+</head>
+<body>
+ 
+  <!-- Floating Particles -->
+  <div class="particles-container" id="particles"></div>
+  <!-- Floating Butterflies -->
+  <div class="butterflies-container" id="butterflies"></div>
+ 
+  <!-- ======= HERO SECTION ======= -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🌻 A Very Special Day 🌻</div>
+      <h1 class="hero-title">
+        <span class="title-line-1">Happy Birthday</span>
+        <!-- FIX: Using Great Vibes font which renders 'y' distinctly from 'v' -->
+        <span class="title-line-2 great-vibes-name">Tapasya</span>
+        <span class="title-line-3">My Dearest Tapsu Baby 🦋</span>
+      </h1>
+      <div class="hero-divider">
+        <span class="divider-line"></span>
+        <span class="divider-icon">🦋</span>
+        <span class="divider-line"></span>
+      </div>
+      <p class="hero-subtitle">
+        I love you in every universe😜❤️
+      </p>
+      <a href="#gallery" class="hero-cta">
+        <span>Explore Your Special Page</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </a>
+    </div>
+    <div class="hero-flower hero-flower--tl">🌻</div>
+    <div class="hero-flower hero-flower--tr">🌻</div>
+    <div class="hero-flower hero-flower--bl">🌼</div>
+    <div class="hero-flower hero-flower--br">🌼</div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+ 
+  <!-- ======= WISH SECTION ======= -->
+  <section class="wish-section" id="wish">
+    <div class="section-decoration top">
+      <img src="sunflower_border.png" alt="sunflower border" class="border-img"/>
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">💛 From the Heart</span>
+        <h2 class="section-title">A Birthday Wish<br/><em>Just For You</em></h2>
+      </div>
+      <div class="wish-card">
+        <div class="wish-card__corner wish-card__corner--tl">🌻</div>
+        <div class="wish-card__corner wish-card__corner--tr">🦋</div>
+        <div class="wish-card__corner wish-card__corner--bl">🦋</div>
+        <div class="wish-card__corner wish-card__corner--br">🌻</div>
+        <div class="wish-card__inner">
+          <p class="wish-salutation">My Dearest Tapasya — My Tapsu Baby 🌻</p>
+          <p class="wish-text">
+            On this magical day, I want you to know Tapasya, you are my sunshine on the cloudiest days, my laughter when everything feels hard, and the most extraordinary human I have ever had the privilege of calling mine. 💛
+          </p>
+          <p class="wish-text">
+            I don't know how I lucked out enough to have someone as grounded, brilliant, and genuinely wonderful as you in my corner, but I am incredibly grateful every single day. You are the person who can make me laugh until my stomach hurts, listen to my wildest rants without judgment, and somehow always knows exactly what to say to make things better. 🌻
+          </p>
+          <p class="wish-text">
+            This year, my wish for you is simple: I want you to get back every single ounce of the happiness, kindness, and magic you put out into the world. May this year bring you closer to everything you're working toward, throw some unforgettable adventures your way, and keep that beautiful smile on your face. 🦋
+          </p>
+          <p class="wish-text">
+            May this birthday be the beginning of your most beautiful chapter yet. May every morning feel like gold, every evening feel like magic, and every moment in between be filled with joy that overflows. You deserve the absolute world, and then some. 🌟
+          </p>
+          <p class="wish-text">
+            Thank you for being you, Tapasya. Thank you for being mine. Happy Birthday, my darling Tapsu Baby. Today and every day — I celebrate you. 🎂
+          </p>
+          <p class="wish-sign">With all my love &amp; endless adoration for you, Tapasya,<br/><span class="sign-name">Forever yours — Aayush 💛🦋</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="section-decoration bottom">
+      <img src="sunflower_border.png" alt="sunflower border" class="border-img border-img--flip"/>
+    </div>
+  </section>
+ 
+  <!-- ======= TAPASYA SOLO GALLERY SECTION ======= -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">📸 Tapasya's Beauty</span>
+        <h2 class="section-title">Tapasya's Gallery<br/><em>of Beautiful Moments</em></h2>
+        <p class="section-subtitle">Every photo tells the story of how wonderful you are, Tapsu Baby 🌻</p>
+      </div>
+      <div class="gallery-grid">
+ 
+        <div class="gallery-item gallery-item--featured" data-index="0">
+          <div class="gallery-frame">
+            <img src="photo1.png" alt="Tapasya in a gorgeous saree" loading="lazy"/>
+            <div class="gallery-overlay">
+              <div class="gallery-overlay__content">
+                <p class="gallery-caption">Radiant &amp; graceful — royalty in every moment 👑</p>
+                <button class="gallery-zoom" onclick="openLightbox(0)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item__tag">🌸 Pure Elegance</div>
+        </div>
+ 
+        <div class="gallery-item" data-index="1">
+          <div class="gallery-frame">
+            <img src="photo2.jpg" alt="Tapasya looking stunning outdoors" loading="lazy"/>
+            <div class="gallery-overlay">
+              <div class="gallery-overlay__content">
+                <p class="gallery-caption">You bloom wherever you go 🌻</p>
+                <button class="gallery-zoom" onclick="openLightbox(1)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item__tag">🌿 Free Spirit</div>
+        </div>
+ 
+        <div class="gallery-item" data-index="2">
+          <div class="gallery-frame">
+            <img src="photo3.png" alt="Tapasya effortlessly chic" loading="lazy"/>
+            <div class="gallery-overlay">
+              <div class="gallery-overlay__content">
+                <p class="gallery-caption">Effortlessly stunning — always 💫</p>
+                <button class="gallery-zoom" onclick="openLightbox(2)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item__tag">✨ Simply Stunning</div>
+        </div>
+ 
+        <div class="gallery-item" data-index="3">
+          <div class="gallery-frame">
+            <img src="photo4.jpg" alt="Tapasya in beautiful red" loading="lazy"/>
+            <div class="gallery-overlay">
+              <div class="gallery-overlay__content">
+                <p class="gallery-caption">A vision in every season 🌹</p>
+                <button class="gallery-zoom" onclick="openLightbox(3)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item__tag">🌺 Timeless Beauty</div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ======= OUR MOMENTS SECTION (replaces messages) ======= -->
+  <section class="moments-section" id="moments">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">💛 Us Together</span>
+        <h2 class="section-title">Our Favourite<br/><em>Memories Together</em></h2>
+        <p class="section-subtitle">Every moment with you is one I hold close to my heart forever 🌸</p>
+      </div>
+ 
+      <div class="moments-grid">
+ 
+        <!-- Tapasya photo 1 from folder -->
+        
+ 
+        <!-- Tapasya photo 2 from folder -->
+        <div class="moment-card moment-card--photo">
+          <div class="moment-media">
+            <img src="moments/1000030767.jpg" alt="Tapasya glowing" loading="lazy"/>
+            <button class="moment-zoom" onclick="openLightbox(5)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+            </button>
+          </div>
+          <div class="moment-caption">
+            <span class="moment-icon">✨</span>
+            <p>First picture together ✨</p>
+          </div>
+        </div>
+        <!-- Tapasya photo 1 from folder -->
+        
+ 
+        <div class="moment-card moment-card--photo">
+          <div class="moment-media">
+            <img src="moments/1000030766.jpg" alt="A beautiful moment" loading="lazy"/>
+            <button class="moment-zoom" onclick="openLightbox(4)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+            </button>
+          </div>
+          <div class="moment-caption">
+            <span class="moment-icon">🌸</span>
+            <p>Hopefully not last 🧿</p>
+          </div>
+        </div>
+
+        <!-- Tapasya photo 3 from folder -->
+        <div class="moment-card moment-card--photo">
+          <div class="moment-media">
+            <img src="moments/1000030776.jpg" alt="Golden moment" loading="lazy"/>
+            <button class="moment-zoom" onclick="openLightbox(6)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+            </button>
+          </div>
+          <div class="moment-caption">
+            <span class="moment-icon">💛</span>
+            <p>Fav pic my cutie😝💛</p>
+          </div>
+        </div>
+ 
+        <!-- Video 1 -->
+        <div class="moment-card moment-card--video">
+          <div class="moment-media">
+            <video class="auto-video" muted loop playsinline preload="metadata" poster="">
+              <source src="moments/1000030772.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="moment-caption">
+            <span class="moment-icon">🎬</span>
+            <p>Effortlessly cuteee💛</p>
+          </div>
+        </div>
+ 
+        <!-- Video 2 -->
+        <div class="moment-card moment-card--video">
+          <div class="moment-media">
+            <video class="auto-video" muted loop playsinline preload="metadata">
+              <source src="moments/1000030773.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="moment-caption">
+            <span class="moment-icon">🦋</span>
+            <p>Happy to bring you with me🌟</p>
+          </div>
+        </div>
+ 
+        <!-- Video 3 -->
+        <div class="moment-card moment-card--video">
+          <div class="moment-media">
+            <video class="auto-video" muted loop playsinline preload="metadata">
+              <source src="moments/1000030774.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="moment-caption">
+            <span class="moment-icon">🌻</span>
+            <p>Moments I will keep replaying forever 🦋 🌻</p>
+          </div>
+        </div>
+ 
+        <!-- Video 4 -->
+        <div class="moment-card moment-card--video">
+          <div class="moment-media">
+            <video class="auto-video" muted loop playsinline preload="metadata">
+              <source src="moments/1000030775.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="moment-caption">
+            <span class="moment-icon">🌟</span>
+            <p>Every second with you is a memory I treasure 🌟</p>
+          </div>
+        </div>
+ 
+        <!-- Video 5 -->
+        <div class="moment-card moment-card--video">
+          <div class="moment-media">
+            <video class="auto-video" muted loop playsinline preload="metadata">
+              <source src="moments/1000030778.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="moment-caption">
+            <span class="moment-icon">💕</span>
+            <p>Here's to a thousand more moments like this one 💕</p>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ======= CELEBRATION SECTION ======= -->
+  <section class="celebration-section" id="celebrate">
+    <div class="container">
+      <div class="celebrate-card">
+        <div class="celebrate-emoji-row">🌻🦋🎂🦋🌻</div>
+        <h2 class="celebrate-title">It's Your Day,<br/>Tapsu Baby! 👑</h2>
+        <p class="celebrate-text">
+          Every single day of the year, you deserve to feel loved and celebrated, Tapasya. But today — today is yours. Own it. Shine in it. You are one of a kind, and this world is so incredibly lucky to have you. 💛✨
+        </p>
+        <div class="celebrate-confetti-row">✨🎊🎉🎊✨</div>
+        <div class="celebrate-hearts">
+          <span class="heart-float heart-float--1">💛</span>
+          <span class="heart-float heart-float--2">🌸</span>
+          <span class="heart-float heart-float--3">💛</span>
+          <span class="heart-float heart-float--4">🦋</span>
+          <span class="heart-float heart-float--5">💛</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-flowers">🌻 🦋 🌸 🦋 🌻</div>
+    <p class="footer-text">Made with 💛 and endless love for <strong>Tapasya</strong> — the most wonderful person in the world</p>
+    <p class="footer-sub">Happy Birthday, my dearest Tapsu Baby 🎂✨</p>
+    <div class="footer-flowers">🌸 🦋 🌻 🦋 🌸</div>
+  </footer>
+ 
+  <!-- ======= LIGHTBOX ======= -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(null, true)">✕</button>
+    <button class="lightbox-nav lightbox-nav--prev" onclick="lightboxNav(-1, event)">‹</button>
+    <div class="lightbox-inner">
+      <img src="" alt="" id="lightbox-img" class="lightbox-img"/>
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+    <button class="lightbox-nav lightbox-nav--next" onclick="lightboxNav(1, event)">›</button>
+  </div>
+ 
+  <script src="script.js"></script>
+  <script>
+    // ---- AUTO-PLAY MUSIC (no button needed) ----
+    // Music is already trimmed to start from 1:29 by ffmpeg
+    const bgMusic = document.getElementById('bg-music');
+    bgMusic.volume = 0.55;
+ 
+    function tryPlay() {
+      bgMusic.play().catch(() => {
+        // Browser blocked autoplay — play on first interaction
+        const unlock = () => {
+          bgMusic.play().catch(() => {});
+          document.removeEventListener('click', unlock);
+          document.removeEventListener('touchstart', unlock);
+          document.removeEventListener('keydown', unlock);
+        };
+        document.addEventListener('click', unlock, { once: true });
+        document.addEventListener('touchstart', unlock, { once: true });
+        document.addEventListener('keydown', unlock, { once: true });
+      });
+    }
+ 
+    // Try immediately, fallback to interaction
+    window.addEventListener('load', tryPlay);
+ 
+    // ---- AUTO-PLAY MOMENT VIDEOS WHEN SCROLLED INTO VIEW ----
+    // Videos stay muted so the background music remains audible.
+    const autoVideos = document.querySelectorAll('video.auto-video');
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const vid = entry.target;
+        if (entry.isIntersecting) {
+          vid.muted = true;
+          vid.play().catch(() => {});
+        } else {
+          vid.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+ 
+    autoVideos.forEach(vid => videoObserver.observe(vid));
+  </script>
+</body>
+</html>
